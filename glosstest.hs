@@ -1,7 +1,19 @@
 import Graphics.Gloss
+import Graphics.Gloss.Interface.Pure.Game
 
 main :: IO ()
-main = display (InWindow "Gloss Test" (640, 480) (10, 10)) white picture
+main = play (InWindow "Gloss Test" (640, 480) (10, 10)) white maxBound initWorld drawWorld eventWorld nextWorld
 
-picture :: Picture
-picture = Translate (-170) (-20) $ Scale 0.5 0.5 $ Text "Hello, World!"
+data World = World Int
+
+initWorld :: World
+initWorld = undefined
+
+drawWorld :: World -> Picture
+drawWorld world = undefined
+
+eventWorld :: Event -> World -> World
+eventWorld event world = undefined
+
+nextWorld :: Float -> World -> World
+nextWorld float world = undefined
