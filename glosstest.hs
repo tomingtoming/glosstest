@@ -4,7 +4,7 @@ import Graphics.Gloss.Interface.Pure.Game
 main :: IO ()
 main =
   play (InWindow "Gloss Test" (640, 480) (10, 10))
-  white maxBound initWorld drawWorld eventWorld nextWorld
+  white 1000 initWorld drawWorld eventWorld nextWorld
 
 data World = World [(String, Int, Int)]
 
